@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.listen(PORT, () => {
     console.log(`
-Don't Forgot To Give Star powered by SILVA TECH INC
+Don't Forgot To Give Star powered by Beltah Tech 
 
  Server running on http://localhost:` + PORT)
 })
