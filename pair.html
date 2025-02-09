@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SilvaTechB Pair Code</title>
+  <title>𝗕𝗘𝗟𝗧𝗔𝗛-𝗠𝗗 𝗕𝗢𝗧</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     body {
@@ -89,11 +89,11 @@
   <div class="container">
     <div class="box">
       <i class="fa fa-user"></i>
-      <h3>Link with Phone Number</h3>
+      <h3>Link with WhatsApp Number</h3>
       <h6>Enter your number with a country code.</h6>
       <div class="input-container">
-        <input placeholder="+921234567xxx" type="tel" id="number">
-        <button id="submit">Submit</button>
+        <input placeholder="254114141xxx" type="tel" id="number">
+        <button id="submit">Authenticate</button>
       </div>
       <div id="message" class="message"></div>
     </div>
@@ -101,7 +101,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
   <script>
-    document.getElementById("submit").addEventListener("click", async () => {
+    document.getElementById("authenticate").addEventListener("click", async () => {
       let numberField = document.getElementById("number");
       let messageField = document.getElementById("message");
       let phoneNumber = numberField.value.trim();
@@ -111,7 +111,7 @@
         return;
       }
       
-      messageField.textContent = "Please wait...";
+      messageField.textContent = "Authenticating, Please wait...";
       try {
         let response = await axios(`/code?number=${phoneNumber}`);
         let code = response.data.code || "Service Unavailable";
